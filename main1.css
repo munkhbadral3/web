@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+}
+.back {
+  height: 100vh;
+  width: 100vw;
+  background-color: #fcfcfc;
+}
+.nav {
+  padding: 20px;
+  width: 20vw;
+  height: 100vh;
+  background-color: #30208d;
+  display: flex;
+  justify-content: end;
+}
+.bar {
+  height: 5px;
+  width: 45px;
+  background: #fff;
+  margin: 10px auto;
+  box-shadow: 0px 5px 50px 5px grey;
+}
+.bar1 {
+  height: 5px;
+  width: 45px;
+  background: #fff;
+  margin: -5px auto;
+  box-shadow: 0px 5px 50px 5px grey;
+}
+.burger:hover .top {
+  display: flex;
+  position: relative;
+  animation: slide 0.25s linear 0.25s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes slide {
+  0% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(0px) rotateZ(25deg);
+  }
+  100% {
+    transform: translateY(15px) rotateZ(75deg);
+  }
+}
+.burger:hover .top1 {
+  display: flex;
+  position: relative;
+  animation: slide1 0.25s linear 0.25s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes slide1 {
+  0% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(0px) rotateZ(-25deg);
+  }
+  100% {
+    transform: translateY(5px) translateX(-11px) rotateZ(-75deg);
+  }
+}
+.burger:hover .middle {
+  display: flex;
+  position: relative;
+  animation: slide2 0.25s linear 0.25s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes slide2 {
+  0% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px) translateX(-5px);
+  }
+}
+.burger:hover .bottom1 {
+  display: flex;
+  position: relative;
+  animation: slide3 0.25s linear 0.25s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes slide3 {
+  0% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(13px) rotateZ(-38deg);
+  }
+}
+.burger:hover .bottom2 {
+  display: flex;
+  position: relative;
+  animation: slide4 0.25s linear 0.25s 1;
+  animation-fill-mode: forwards;
+}
+@keyframes slide4 {
+  0% {
+    transform: translateY(0px) rotateZ(0deg);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(3px) translateX(-10px) rotateZ(38deg);
+  }
+}
