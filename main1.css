@@ -113,3 +113,49 @@ body {
     transform: translateY(3px) translateX(-10px) rotateZ(38deg);
   }
 }
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #b72a67;
+}
+.navigation {
+  padding: 20px;
+  width: 20vw;
+  height: 100vh;
+  background-color: #8d2050;
+  display: flex;
+  justify-content: start;
+}
+.hamburger {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  transition-property: transform;
+  transition-duration: 2s;
+}
+.ber {
+  height: 40px;
+  width: 2px;
+  background: #fff;
+  margin: 10px auto;
+  box-shadow: 0px 5px 50px 5px;
+}
+.hamburger:hover .top3 {
+  transform: translateX(37px) translateY(-20px);
+  width: 300px;
+  height: 2px;
+  transition-duration: 0.5s;
+}
+.hamburger:hover .bottom {
+  width: 300px;
+  height: 2px;
+  transform: translateX(-37px) translateY(20px);
+  transition-duration: 0.5s;
+}
+.burger{
+  width: 60px;
+  height: 60px;
+}
