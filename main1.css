@@ -28,8 +28,17 @@ body {
   margin: -5px auto;
   box-shadow: 0px 5px 50px 5px grey;
 }
-.burger:hover .top {
-  display: flex;
+input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  z-index: 3;
+}
+#scales:checked ~ .top {
   position: relative;
   animation: slide 0.25s linear 0.25s 1;
   animation-fill-mode: forwards;
@@ -45,7 +54,7 @@ body {
     transform: translateY(15px) rotateZ(75deg);
   }
 }
-.burger:hover .top1 {
+#scales:checked ~ .top1 {
   display: flex;
   position: relative;
   animation: slide1 0.25s linear 0.25s 1;
@@ -62,7 +71,7 @@ body {
     transform: translateY(5px) translateX(-11px) rotateZ(-75deg);
   }
 }
-.burger:hover .middle {
+#scales:checked ~ .middle {
   display: flex;
   position: relative;
   animation: slide2 0.25s linear 0.25s 1;
@@ -79,7 +88,7 @@ body {
     transform: translateY(0px) translateX(-5px);
   }
 }
-.burger:hover .bottom1 {
+#scales:checked ~ .bottom1 {
   display: flex;
   position: relative;
   animation: slide3 0.25s linear 0.25s 1;
@@ -96,7 +105,7 @@ body {
     transform: translateY(13px) rotateZ(-38deg);
   }
 }
-.burger:hover .bottom2 {
+#scales:checked ~ .bottom2 {
   display: flex;
   position: relative;
   animation: slide4 0.25s linear 0.25s 1;
@@ -113,16 +122,22 @@ body {
     transform: translateY(3px) translateX(-10px) rotateZ(38deg);
   }
 }
+.burger {
+  width: 60px;
+  height: 60px;
+}
 .container {
   width: 100vw;
   height: 100vh;
-  background-color: #b72a67;
+  /* background-color: #b72a67; */
+  background-color: #fff;
 }
 .navigation {
   padding: 20px;
   width: 20vw;
   height: 100vh;
-  background-color: #8d2050;
+  /* background-color: #8d2050; */
+  background-color: #30208d;
   display: flex;
   justify-content: start;
 }
@@ -155,7 +170,202 @@ body {
   transform: translateX(-37px) translateY(20px);
   transition-duration: 0.5s;
 }
-.burger{
+
+.container1 {
+  position: absolute;
+  top: 100px;
+  left: 600px;
+  height: 1200px;
+  width: 1800px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 30% 20% 30%;
+  grid-template-columns: 30% 20% 30%;
+  grid-template-areas:
+    "header header beader"
+    "body dody beader"
+    "footer footer fooder";
+}
+.pic1 {
+  grid-area: header;
+}
+.pic2 {
+  grid-area: beader;
+}
+.pic3 {
+  grid-area: body;
+}
+.pic4 {
+  grid-area: dody;
+}
+.pic5 {
+  grid-area: footer;
+}
+.pic6 {
+  grid-area: fooder;
+}
+.pic1:hover {
+  grid-area: header;
+  box-shadow: 5px 5px grey, 10px 10px rgb(160, 160, 160),
+    15px 15px rgb(204, 203, 203);
+}
+.pic2:hover {
+  grid-area: beader;
+  box-shadow: 5px 5px grey, 10px 10px rgb(160, 160, 160),
+    15px 15px rgb(204, 203, 203);
+}
+.pic3:hover {
+  grid-area: body;
+  box-shadow: 5px 5px grey, 10px 10px rgb(160, 160, 160),
+    15px 15px rgb(204, 203, 203);
+}
+.pic4:hover {
+  grid-area: dody;
+  box-shadow: 5px 5px grey, 10px 10px rgb(160, 160, 160),
+    15px 15px rgb(204, 203, 203);
+}
+.pic5:hover {
+  grid-area: footer;
+  box-shadow: 5px 5px grey, 10px 10px rgb(160, 160, 160),
+    15px 15px rgb(204, 203, 203);
+}
+.pic6:hover {
+  grid-area: fooder;
+  box-shadow: 5px 5px grey, 10px 10px rgb(160, 160, 160),
+    15px 15px rgb(204, 203, 203);
+}
+img {
+  width: 100%;
+  height: 100%;
+  margin: 10px auto;
+}
+#scales:checked ~ .menu {
+  animation: 1s item;
+  display: block;
+  transform: translateX(100px);
+}
+#scales:checked ~ .hamburger1 {
+  animation: 0.5s item1;
+  display: block;
+  transform: translateX(100px);
+}
+#scales:checked ~ .hamburger2 {
+  animation: 1s item2;
+  display: block;
+  transform: translateX(0px);
+}
+#scales:checked ~ .hamburger3 {
+  animation: 2s item3;
+  display: block;
+  transform: translateX(0px);
+}
+#scales:checked ~ .hamburger4 {
+  animation: 2.5s item4;
+  display: block;
+  transform: translateX(0px);
+}
+#scales:checked ~ .hamburger5 {
+  animation: 3s item5;
+  display: block;
+  transform: translateX(0px);
+}
+@keyframes item1 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+@keyframes item2 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+@keyframes item3 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+@keyframes item4 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+@keyframes item5 {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+}
+.hamburger1 {
+  top: 100px;
+  z-index: 2;
+  position: absolute;
   width: 60px;
   height: 60px;
+  cursor: pointer;
+  margin: 10px;
+  transform: translateX(-150px);
+}
+.hamburger2 {
+  z-index: 2;
+  top: 200px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 10px;
+  transform: translateX(-150px);
+}
+.hamburger3 {
+  z-index: 2;
+  top: 300px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 10px;
+  transform: translateX(-150px);
+}
+.hamburger4 {
+  z-index: 2;
+  top: 400px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 10px;
+  transform: translateX(-150px);
+}
+.hamburger5 {
+  z-index: 2;
+  top: 500px;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  margin: 10px;
+  transform: translateX(-150px);
 }
